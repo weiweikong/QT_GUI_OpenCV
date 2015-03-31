@@ -28,9 +28,13 @@ void MainWindow::on_actionOpenImg_triggered()
     image = cv::imread(filename.toLatin1().data());
     cv::cvtColor(image,dst,CV_BGR2RGB);
     QImage img = QImage((const unsigned char *)(dst.data),dst.cols,dst.rows,dst.step,QImage::Format_RGB888);
+
     inputscene->clear();
     inputscene->addPixmap(QPixmap::fromImage(img));
+
     ui->InputGraphic->setScene(inputscene);
+
+
     //cv::namedWindow("Open Image");
     // cv::imshow("Open Image",image);
 }

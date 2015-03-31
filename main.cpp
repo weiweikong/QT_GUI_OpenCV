@@ -3,9 +3,9 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QApplication Qt_OpenCV_GUI(argc, argv);
+    MainWindow mainWindow;
+    mainWindow.show();
     
-    return a.exec();
+    return Qt_OpenCV_GUI.exec();
 }

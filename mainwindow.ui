@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>677</width>
-    <height>568</height>
+    <width>1161</width>
+    <height>674</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>在QT_GUI窗口中显示CV图像</string>
+   <string>Image and Video Testbed by UCS</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>180</x>
       <y>40</y>
       <width>96</width>
       <height>16</height>
@@ -30,7 +30,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>520</x>
       <y>40</y>
       <width>120</width>
       <height>16</height>
@@ -40,23 +40,68 @@
      <string>Image After Process:</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>70</y>
-      <width>611</width>
+      <width>831</width>
       <height>411</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QGraphicsView" name="InputGraphic"/>
+      <widget class="ImageView" name="InputGraphic"/>
      </item>
      <item>
       <widget class="QGraphicsView" name="OutputGraphic"/>
      </item>
     </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>560</y>
+      <width>291</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pbLastFrame">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>&lt;-  Last Frame</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbuttionNextFrame">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Next Frame -&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelFrameControl">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>530</y>
+      <width>85</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Frame Control</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -64,8 +109,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>677</width>
-     <height>23</height>
+     <width>1161</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuHelp">
@@ -124,6 +169,13 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ImageView</class>
+   <extends>QGraphicsView</extends>
+   <header>imageview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="Toolbar.qrc"/>
  </resources>

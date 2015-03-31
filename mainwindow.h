@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <QGraphicsScene>
+#include <QGraphicsItem>
+#include <QtGui>
+
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
 
@@ -26,8 +29,11 @@ private:
     Ui::MainWindow *ui;
     cv::Mat image;
     cv::Mat dst;
+
     QGraphicsScene *inputscene;
     QGraphicsScene *outputscene;
+
+
 };
 
 #endif // MAINWINDOW_H
